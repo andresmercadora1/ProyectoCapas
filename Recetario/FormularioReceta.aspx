@@ -22,7 +22,7 @@
             <div class="row">
 
                 <div class="col-12 border border-primary p-2">
-
+                    <span class="alert alert-primary m-0 p-2 px-4 text-uppercase float-start">Informacion receta</span>
                     <a href="FormularioMenu.aspx" class="btn btn-outline-dark float-end me-3">Menu</a>
                     <a href="FormularioMenu.aspx" class="btn btn-outline-dark float-end me-3">Plato</a>
                     <a href="FormularioReceta.aspx" class="btn btn-outline-dark float-end me-3">Receta</a>
@@ -86,7 +86,7 @@
 
             <div class="row">
 
-                <div class="col-12 border border-secondary my-3 p-3">
+                <div class="col-12 border border-primary my-3 p-3">
 
                     <asp:DataGrid ID="gvMostrar" CssClass="table table-bordered table-hover table-striped mt-3 text-center text-secondary" runat="server"></asp:DataGrid>
 

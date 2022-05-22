@@ -22,7 +22,7 @@
             <div class="row">
 
                 <div class="col-12 border border-primary p-2">
-
+                    <span class="alert alert-primary m-0 p-2 px-4 text-uppercase float-start">Informacion menu</span>
                     <a href="FormularioMenu.aspx" class="btn btn-outline-dark float-end me-3">Menu</a>
                     <a href="FormularioMenu.aspx" class="btn btn-outline-dark float-end me-3">Plato</a>
                     <a href="FormularioReceta.aspx" class="btn btn-outline-dark float-end me-3">Receta</a>
@@ -37,7 +37,7 @@
                     <div class="row">
                         <div class="col">
                             <asp:Label ID="lblFuente" runat="server" CssClass="form-label" Text="Código receta"></asp:Label>
-                            <asp:DropDownList ID="DropDownList1" CssClass="form-control my-2" runat="server">
+                            <asp:DropDownList ID="ddlCodReceta" AutoPostBack="false"  CssClass="form-control my-2" runat="server">
                             </asp:DropDownList>
                         </div>
                         <div class="col">
@@ -58,15 +58,32 @@
                     </div>
 
                     <div class="col-6">
-                        <asp:Button ID="btnAgregar" CssClass="btn btn-outline-primary" runat="server" Text="Agregar" OnClick="btnAgregar_Click" />
+                        <asp:Button ID="btnAgregarMenu" CssClass="btn btn-outline-primary" runat="server" Text="Agregar" OnClick="btnAgregar_Click" />
                     </div>
+                </div>
+
+                <div class="col-4 border border-primary p-3">
+
+                    <asp:Label ID="lblCodMenuEmpty" runat="server" Text=""></asp:Label>
+                    <asp:TextBox CssClass="form-control my-2" ID="txtCodMenu" runat="server"></asp:TextBox> 
+
+                    <div class="d-grid gap-3 d-md-block float-end">
+                        <asp:Button ID="btnModificarMenu" CssClass="btn btn-outline-warning" runat="server" Text="Editar" OnClick="btnAgregar_Click" Enabled="False" />
+                        <asp:Button ID="btnEliminarMenu" CssClass="btn btn-outline-danger" runat="server" Text="Eliminar" OnClick="btnEliminarMenu_Click" />
+                        <asp:Button ID="btnConsultarMenu" CssClass="btn btn-outline-success" runat="server" Text="Consultar" OnClick="btnConsultarMenu_Click" />
+                    </div>
+
                 </div>
 
             </div>
 
             <div class="row">
 
-             
+                <div class="col-12 border border-primary my-3 p-3">
+
+                    <asp:DataGrid ID="gvMostrarMenu" CssClass="table table-bordered table-hover table-striped mt-3 text-center text-secondary" runat="server"></asp:DataGrid>
+
+                </div>
 
             </div>
 

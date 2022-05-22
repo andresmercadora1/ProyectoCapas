@@ -9,7 +9,7 @@ CREATE TABLE receta(
 	utensilios_receta varchar(100) NOT NULL,
 	comentario_receta varchar(100) NOT NULL,
 	tiempo_receta time(7) NOT NULL,
-	activo BIT DEFAULT 1
+	activo BIT DEFAULT 1 ON DELETE CASCADE
 );
 
 CREATE PROC agregar_receta
@@ -76,30 +76,31 @@ SELECT * FROM receta;
 CREATE TABLE menu(
 	cod_menu int PRIMARY KEY IDENTITY(1,1) NOT NULL,
 	cod_receta int NOT NULL,
-	plato_menu varchar(50) NOT NULL,
+	nombre_menu varchar(50) NOT NULL,
 	precio_menu decimal(18, 2) NOT NULL,
 	comentario_menu varchar(100) NOT NULL,
 	activo BIT DEFAULT 1,
-	CONSTRAINT fk_menu_receta FOREIGN KEY(cod_receta) REFERENCES receta(cod_receta)
+	CONSTRAINT fk_menu_receta FOREIGN KEY(cod_receta) REFERENCES receta(cod_receta) ON DELETE CASCADE
 );
+
 
 CREATE PROC agregar_menu
 	@cod_receta int,
-	@plato_menu varchar(50),
+	@nombre_menu varchar(50),
 	@precio_menu decimal(18, 2),
 	@comentario_menu varchar(100)
 AS
 INSERT INTO menu
 (
 	cod_receta,
-	plato_menu,
+	nombre_menu,
 	precio_menu,
 	comentario_menu
 )
 VALUES
 (
 	@cod_receta,
-	@plato_menu,
+	@nombre_menu,
 	@precio_menu,
 	@comentario_menu
 );
@@ -107,13 +108,13 @@ VALUES
 CREATE PROC modificar_menu
 	@cod_menu int,
 	@cod_receta int,
-	@plato_menu varchar(50),
+	@nombre_menu varchar(50),
 	@precio_menu decimal(18, 2),
 	@comentario_menu varchar(100)
 AS
 UPDATE menu SET 
 	cod_receta = @cod_receta,
-	plato_menu = @plato_menu,
+	nombre_menu = @nombre_menu,
 	precio_menu = @precio_menu,
 	comentario_menu = @comentario_menu
 WHERE cod_menu = @cod_menu;
@@ -134,6 +135,7 @@ CREATE PROC mostrar_menu
 AS
 SELECT * FROM menu;
 
+
 CREATE TABLE plato(
 	cod_plato int IDENTITY(1,1) NOT NULL,
 	cod_receta int NOT NULL,
@@ -146,7 +148,7 @@ CREATE TABLE plato(
 	cant_util_ing_por_plato decimal(5, 2) NOT NULL,
 	unidad_medida_por_plato varchar(100) NOT NULL,
 	activo BIT DEFAULT 1,
-	CONSTRAINT fk_plato_receta FOREIGN KEY(cod_receta) REFERENCES receta(cod_receta)
+	CONSTRAINT fk_plato_receta FOREIGN KEY(cod_receta) REFERENCES receta(cod_receta) ON DELETE CASCADE
 );
 
 CREATE PROC agregar_plato
