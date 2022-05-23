@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using CapaEntidad;
 using CapaNegocio;
 using System.Data;
-using System.Data.SqlClient;
+
 
 namespace Recetario
 {

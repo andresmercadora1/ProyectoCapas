@@ -68,8 +68,8 @@
                     <asp:TextBox CssClass="form-control my-2" ID="txtCodMenu" runat="server"></asp:TextBox> 
 
                     <div class="d-grid gap-3 d-md-block float-end">
-                        <asp:Button ID="btnModificarMenu" CssClass="btn btn-outline-warning" runat="server" Text="Editar" OnClick="btnAgregar_Click" Enabled="False" />
-                        <asp:Button ID="btnEliminarMenu" CssClass="btn btn-outline-danger" runat="server" Text="Eliminar" OnClick="btnEliminarMenu_Click" />
+                        <asp:Button ID="btnModificarMenu" CssClass="btn btn-outline-warning" runat="server" Text="Editar" OnClick="btnAgregar_Click" Enabled="False" style="height: 27px" />
+                        <asp:Button ID="FormularioPlato" CssClass="btn btn-outline-danger" runat="server" Text="Eliminar" OnClick="btnEliminarMenu_Click" />
                         <asp:Button ID="btnConsultarMenu" CssClass="btn btn-outline-success" runat="server" Text="Consultar" OnClick="btnConsultarMenu_Click" />
                     </div>
 

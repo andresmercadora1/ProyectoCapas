@@ -42,6 +42,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CDMenu.cs" />
+    <Compile Include="CDPlato.cs" />
     <Compile Include="CDReceta.cs" />
     <Compile Include="Conexion.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -4,3 +4,9 @@ C:\Users\amerc\Documents\C#\ProyectoCapas\CapaEntidad\obj\Debug\CapaEntidad.cspr
 C:\Users\amerc\Documents\C#\ProyectoCapas\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
 C:\Users\amerc\Documents\C#\ProyectoCapas\CapaEntidad\obj\Debug\CapaEntidad.dll
 C:\Users\amerc\Documents\C#\ProyectoCapas\CapaEntidad\obj\Debug\CapaEntidad.pdb
+C:\Users\Jessica\Documents\ProyectoCapas\CapaEntidad\bin\Debug\CapaEntidad.dll
+C:\Users\Jessica\Documents\ProyectoCapas\CapaEntidad\bin\Debug\CapaEntidad.pdb
+C:\Users\Jessica\Documents\ProyectoCapas\CapaEntidad\obj\Debug\CapaEntidad.csproj.AssemblyReference.cache
+C:\Users\Jessica\Documents\ProyectoCapas\CapaEntidad\obj\Debug\CapaEntidad.csproj.CoreCompileInputs.cache
+C:\Users\Jessica\Documents\ProyectoCapas\CapaEntidad\obj\Debug\CapaEntidad.dll
+C:\Users\Jessica\Documents\ProyectoCapas\CapaEntidad\obj\Debug\CapaEntidad.pdb

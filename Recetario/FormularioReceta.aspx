@@ -24,7 +24,7 @@
                 <div class="col-12 border border-primary p-2">
                     <span class="alert alert-primary m-0 p-2 px-4 text-uppercase float-start">Informacion receta</span>
                     <a href="FormularioMenu.aspx" class="btn btn-outline-dark float-end me-3">Menu</a>
-                    <a href="FormularioMenu.aspx" class="btn btn-outline-dark float-end me-3">Plato</a>
+                    <a href="FormularioPlato.aspx" class="btn btn-outline-dark float-end me-3">Plato</a>
                     <a href="FormularioReceta.aspx" class="btn btn-outline-dark float-end me-3">Receta</a>
                    
                 </div>
@@ -76,7 +76,7 @@
 
                     <div class="d-grid gap-3 d-md-block float-end">
                         <asp:Button ID="btnModificar" OnClick="btnAgregar_Click" CssClass="btn btn-outline-warning" runat="server" Text="Editar" Enabled="False" />
-                        <asp:Button ID="Button2" OnClick="btnEliminar_Click" CssClass="btn btn-outline-danger" runat="server" Text="Eliminar" />
+                        <asp:Button ID="Button2" OnClick="btnEliminar_Click" CssClass="btn btn-outline-danger" runat="server" Text="Eliminar" style="height: 27px" />
                         <asp:Button ID="btnConsultar" OnClick="btnConsultar_Click" CssClass="btn btn-outline-success" runat="server" Text="Consultar" />
                     </div>
 
