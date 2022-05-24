@@ -24,7 +24,7 @@
                 <div class="col-12 border border-primary p-2">
                     <span class="alert alert-primary m-0 p-2 px-4 text-uppercase float-start">Informacion menu</span>
                     <a href="FormularioMenu.aspx" class="btn btn-outline-dark float-end me-3">Menu</a>
-                    <a href="FormularioMenu.aspx" class="btn btn-outline-dark float-end me-3">Plato</a>
+                    <a href="FormularioPlato.aspx" class="btn btn-outline-dark float-end me-3">Plato</a>
                     <a href="FormularioReceta.aspx" class="btn btn-outline-dark float-end me-3">Receta</a>
                    
                 </div>

@@ -24,13 +24,13 @@ namespace CapaDatos
                 objcommand.CommandText = "agregar_plato";
                 objcommand.Parameters.AddWithValue("@cod_receta", objplato.Cod_receta);
                 objcommand.Parameters.AddWithValue("@tipo_plato", objplato.Tipo_plato);
-                objcommand.Parameters.AddWithValue("@ingredientes_principal_plato", objplato.Ingredientes_principal_plato);
-                objcommand.Parameters.AddWithValue("@precio_plato", objplato.Precio_plato);
-                objcommand.Parameters.AddWithValue("@comentario_adicional_plato", objplato.Comentario_adicional_plato);
-                objcommand.Parameters.AddWithValue("@nombre_plato", objplato.Nombre_plato);
-                objcommand.Parameters.AddWithValue("@calorias_plato", objplato.Calorias_plato);
-                objcommand.Parameters.AddWithValue("@cant_util_ing_por_plato", objplato.Cant_util_ing_por_plato);
-                objcommand.Parameters.AddWithValue("@unidad_medida_por_plato", objplato.Unidad_medida_por_plato);
+                objcommand.Parameters.AddWithValue("@ingredientes_principal", objplato.Ingredientes_principal);
+                objcommand.Parameters.AddWithValue("@precio", objplato.Precio);
+                objcommand.Parameters.AddWithValue("@comentario", objplato.Comentario);
+                objcommand.Parameters.AddWithValue("@nombre", objplato.Nombre);
+                objcommand.Parameters.AddWithValue("@calorias", objplato.Calorias);
+                objcommand.Parameters.AddWithValue("@cant_ingredientes", objplato.Cant_ingredientes);
+                objcommand.Parameters.AddWithValue("@porcion", objplato.Porcion);
 
 
                 objcommand.ExecuteNonQuery();
@@ -54,13 +54,13 @@ namespace CapaDatos
                 objcommand.Parameters.AddWithValue("@cod_plato", objplato.Cod_plato);
                 objcommand.Parameters.AddWithValue("@cod_receta", objplato.Cod_receta);
                 objcommand.Parameters.AddWithValue("@tipo_plato", objplato.Tipo_plato);
-                objcommand.Parameters.AddWithValue("@ingredientes_principal_plato", objplato.Ingredientes_principal_plato);
-                objcommand.Parameters.AddWithValue("@precio_plato", objplato.Precio_plato);
-                objcommand.Parameters.AddWithValue("@comentario_adicional_plato", objplato.Comentario_adicional_plato);
-                objcommand.Parameters.AddWithValue("@nombre_plato", objplato.Nombre_plato);
-                objcommand.Parameters.AddWithValue("@calorias_plato", objplato.Calorias_plato);
-                objcommand.Parameters.AddWithValue("@cant_util_ing_por_plato", objplato.Cant_util_ing_por_plato);
-                objcommand.Parameters.AddWithValue("@unidad_medida_por_plato", objplato.Unidad_medida_por_plato);
+                objcommand.Parameters.AddWithValue("@ingredientes_principal", objplato.Ingredientes_principal);
+                objcommand.Parameters.AddWithValue("@precio", objplato.Precio);
+                objcommand.Parameters.AddWithValue("@comentario", objplato.Comentario);
+                objcommand.Parameters.AddWithValue("@nombre", objplato.Nombre);
+                objcommand.Parameters.AddWithValue("@calorias", objplato.Calorias);
+                objcommand.Parameters.AddWithValue("@cant_ingredientes", objplato.Cant_ingredientes);
+                objcommand.Parameters.AddWithValue("@porcion", objplato.Porcion);
 
 
                 objcommand.ExecuteNonQuery();

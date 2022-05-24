@@ -140,13 +140,13 @@ CREATE TABLE plato(
 	cod_plato int IDENTITY(1,1) NOT NULL,
 	cod_receta int NOT NULL,
 	tipo_plato varchar(50) NOT NULL,
-	ingredientes_principal_plato varchar(100) NOT NULL,
-	precio_plato decimal(18, 2) NOT NULL,
-	comentario_adicional_plato varchar(100) NOT NULL,
-	nombre_plato varchar(100) NOT NULL,
-	calorias_plato varchar(100) NOT NULL,
-	cant_util_ing_por_plato decimal(5, 2) NOT NULL,
-	unidad_medida_por_plato varchar(100) NOT NULL,
+	ingredientes_principal varchar(100) NOT NULL,
+	precio decimal(18, 2) NOT NULL,
+	comentario varchar(100) NOT NULL,
+	nombre varchar(100) NOT NULL,
+	calorias varchar(100) NOT NULL,
+	cant_ingredientes decimal(5, 2) NOT NULL,
+	porcion varchar(100) NOT NULL,
 	activo BIT DEFAULT 1,
 	CONSTRAINT fk_plato_receta FOREIGN KEY(cod_receta) REFERENCES receta(cod_receta) ON DELETE CASCADE
 );
@@ -154,61 +154,61 @@ CREATE TABLE plato(
 CREATE PROC agregar_plato
 	@cod_receta int,
 	@tipo_plato varchar(50),
-	@ingredientes_principal_plato varchar(100),
-	@precio_plato decimal(18, 2),
-	@comentario_adicional_plato varchar(100),
-	@nombre_plato varchar(100),
-	@calorias_plato varchar(100),
-	@cant_util_ing_por_plato decimal(5, 2),
-	@unidad_medida_por_plato varchar(100)
+	@ingredientes_principal varchar(100),
+	@precio decimal(18, 2),
+	@comentario varchar(100),
+	@nombre varchar(100),
+	@calorias varchar(100),
+	@cant_ingredientes decimal(18, 2),
+	@porcion varchar(100)
 AS
 INSERT INTO plato
 (
 	cod_receta,
 	tipo_plato,
-	ingredientes_principal_plato,
-	precio_plato,
-	comentario_adicional_plato,
-	nombre_plato,
-	calorias_plato,
-	cant_util_ing_por_plato,
-	unidad_medida_por_plato
+	ingredientes_principal,
+	precio,
+	comentario,
+	nombre,
+	calorias,
+	cant_ingredientes,
+	porcion
 )
 VALUES
 (
 	@cod_receta,
 	@tipo_plato,
-	@ingredientes_principal_plato,
-	@precio_plato,
-	@comentario_adicional_plato,
-	@nombre_plato,
-	@calorias_plato,
-	@cant_util_ing_por_plato,
-	@unidad_medida_por_plato
+	@ingredientes_principal,
+	@precio,
+	@comentario,
+	@nombre,
+	@calorias,
+	@cant_ingredientes,
+	@porcion
 );
 
 CREATE PROC modificar_plato
 	@cod_plato int,
 	@cod_receta int,
 	@tipo_plato varchar(50),
-	@ingredientes_principal_plato varchar(100),
-	@precio_plato decimal(18, 2),
-	@comentario_adicional_plato varchar(100),
-	@nombre_plato varchar(100),
-	@calorias_plato varchar(100),
-	@cant_util_ing_por_plato decimal(5, 2),
-	@unidad_medida_por_plato varchar(100)
+	@ingredientes_principal varchar(100),
+	@precio decimal(18, 2),
+	@comentario varchar(100),
+	@nombre varchar(100),
+	@calorias varchar(100),
+	@cant_ingredientes decimal(18, 2),
+	@porcion varchar(100)
 AS
 UPDATE plato SET 
 	cod_receta = @cod_receta,
 	tipo_plato = @tipo_plato,
-	ingredientes_principal_plato = @ingredientes_principal_plato,
-	precio_plato = @precio_plato,
-	comentario_adicional_plato = @comentario_adicional_plato,
-	nombre_plato = @nombre_plato,
-	calorias_plato = @calorias_plato,
-	cant_util_ing_por_plato = @cant_util_ing_por_plato,
-	unidad_medida_por_plato = @unidad_medida_por_plato
+	ingredientes_principal = @ingredientes_principal,
+	precio = @precio,
+	comentario = @comentario,
+	nombre = @nombre,
+	calorias = @calorias,
+	cant_ingredientes = @cant_ingredientes,
+	porcion = @porcion
 WHERE cod_plato = @cod_plato;
 
 CREATE PROC eliminar_plato

@@ -76,7 +76,7 @@
 
                     <div class="d-grid gap-3 d-md-block float-end">
                         <asp:Button ID="btnModificar" OnClick="btnAgregar_Click" CssClass="btn btn-outline-warning" runat="server" Text="Editar" Enabled="False" />
-                        <asp:Button ID="Button2" OnClick="btnEliminar_Click" CssClass="btn btn-outline-danger" runat="server" Text="Eliminar" style="height: 27px" />
+                        <asp:Button ID="Button2" OnClick="btnEliminar_Click" CssClass="btn btn-outline-danger" runat="server" Text="Eliminar" />
                         <asp:Button ID="btnConsultar" OnClick="btnConsultar_Click" CssClass="btn btn-outline-success" runat="server" Text="Consultar" />
                     </div>
 

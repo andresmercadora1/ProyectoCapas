@@ -30,13 +30,13 @@ namespace Recetario
 
             oCePlato.Tipo_plato = txtTipoPlato.Text;
             oCePlato.Cod_receta = Convert.ToInt32(ddlCodReceta.SelectedValue);
-            oCePlato.Ingredientes_principal_plato = txtIngredietes.Text;
-            oCePlato.Precio_plato = Convert.ToDouble(txtprecio.Text);
-            oCePlato.Nombre_plato = txtnombre.Text;
-            oCePlato.Calorias_plato = txtcalorias.Text;
-            oCePlato.Cant_util_ing_por_plato = Convert.ToDouble(txtcaningP.Text);
-            oCePlato.Unidad_medida_por_plato = (txtPorcion.Text);
-            oCePlato.Comentario_adicional_plato = (txtComentario.Text);
+            oCePlato.Ingredientes_principal = txtIngredietes.Text;
+            oCePlato.Precio = Convert.ToDouble(txtprecio.Text);
+            oCePlato.Nombre = txtnombre.Text;
+            oCePlato.Calorias = txtcalorias.Text;
+            oCePlato.Cant_ingredientes = Convert.ToDouble(txtcaningP.Text);
+            oCePlato.Porcion = (txtPorcion.Text);
+            oCePlato.Comentario = (txtComentario.Text);
 
             if (!txtcodPlato.Text.Equals(""))
             {
@@ -71,13 +71,13 @@ namespace Recetario
                     lblResultado.Text = "Receta agregada correctamente";
                     clearCampos();
                     txtTipoPlato.CssClass = "form-control my-2";
-                txtIngredietes.CssClass = "form-control my-2";
-                txtprecio.CssClass = "form-control my-2";
-                txtnombre.CssClass = "form-control my-2";
-                txtComentario.CssClass = "form-control my-2";
-                txtcalorias.CssClass = "form-control my-2";
-                txtcaningP.CssClass = "form-control my-2"; ;
-                txtPorcion.CssClass = "form-control my-2"; ;
+                    txtIngredietes.CssClass = "form-control my-2";
+                    txtprecio.CssClass = "form-control my-2";
+                    txtnombre.CssClass = "form-control my-2";
+                    txtComentario.CssClass = "form-control my-2";
+                    txtcalorias.CssClass = "form-control my-2";
+                    txtcaningP.CssClass = "form-control my-2"; ;
+                    txtPorcion.CssClass = "form-control my-2";
                     mostrarPlato();
                 }
         }
@@ -143,14 +143,15 @@ namespace Recetario
                 return;
             }
 
+            ddlCodReceta.SelectedValue = ds.Tables[0].Rows[0]["cod_receta"].ToString();
             txtTipoPlato.Text = ds.Tables[0].Rows[0]["tipo_plato"].ToString();
-            txtIngredietes.Text = ds.Tables[0].Rows[0]["ingredientes_principal_plato"].ToString();
-            txtprecio.Text = ds.Tables[0].Rows[0]["precio_plato"].ToString();
-            txtComentario.Text = ds.Tables[0].Rows[0]["comentario_adicional_plato"].ToString();
-            txtnombre.Text = ds.Tables[0].Rows[0]["nombre_plato"].ToString();
-            txtcalorias.Text = ds.Tables[0].Rows[0]["calorias_plato"].ToString();
-            txtcaningP.Text = ds.Tables[0].Rows[0]["cant_util_ing_por_plato"].ToString();
-            txtPorcion.Text = ds.Tables[0].Rows[0]["unidad_medida_por_plato"].ToString();
+            txtIngredietes.Text = ds.Tables[0].Rows[0]["ingredientes_principal"].ToString();
+            txtprecio.Text = ds.Tables[0].Rows[0]["precio"].ToString();
+            txtComentario.Text = ds.Tables[0].Rows[0]["comentario"].ToString();
+            txtnombre.Text = ds.Tables[0].Rows[0]["nombre"].ToString();
+            txtcalorias.Text = ds.Tables[0].Rows[0]["calorias"].ToString();
+            txtcaningP.Text = ds.Tables[0].Rows[0]["cant_ingredientes"].ToString();
+            txtPorcion.Text = ds.Tables[0].Rows[0]["porcion"].ToString();
             btnAgregarPlato.Enabled = false;
             btnModificarPlato.Enabled = true;
         }
@@ -240,6 +241,8 @@ namespace Recetario
             CNPlato objGetPlato = new CNPlato();
             gvMostrarPlato.DataSource = objGetPlato.mostrar_plato();
             gvMostrarPlato.DataBind();
+
+            
         }
     }
 }
