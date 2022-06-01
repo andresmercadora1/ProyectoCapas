@@ -9,7 +9,7 @@ CREATE TABLE receta(
 	utensilios_receta varchar(100) NOT NULL,
 	comentario_receta varchar(100) NOT NULL,
 	tiempo_receta time(7) NOT NULL,
-	activo BIT DEFAULT 1 ON DELETE CASCADE
+	activo BIT DEFAULT 1
 );
 
 CREATE PROC agregar_receta
