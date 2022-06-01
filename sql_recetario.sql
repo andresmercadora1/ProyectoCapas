@@ -137,7 +137,7 @@ SELECT * FROM menu;
 
 
 CREATE TABLE plato(
-	cod_plato int IDENTITY(1,1) NOT NULL,
+	cod_plato int IDENTITY(1,1) NOT NULL PRIMARY KEY,
 	cod_receta int NOT NULL,
 	tipo_plato varchar(50) NOT NULL,
 	ingredientes_principal varchar(100) NOT NULL,
